@@ -20,6 +20,12 @@ const router = async () => {
     const content = null || document.getElementById('content');
 
     header.innerHTML = await Header();
+    //Obteniendo el hash de la ruta
+    let hash = getHash();
+    //Manejando la ruta
+    let route = await resolveRoutes(hash);
+    let render = routes[route] ? routes[route] : Error404;
+    content.innerHTML =  await render();
 };
 
 export default router;

@@ -5,7 +5,7 @@ const Header = () => {
                 <h1><a href="/">100tifi.co</a></h1>
             </div>
             <div class="header-nav">
-                <a hre="#/about/">About</a>
+                <a href="#/about/">About</a>
             </div>
         </div>
     `;
