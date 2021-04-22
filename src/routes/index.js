@@ -1,8 +1,10 @@
 //Importando templates y paginas
-import Header from '../templates/header'
-import Home from '../pages/home'
-import Character from '../pages/character'
-import Error404 from '../pages/error404'
+import Header from '../templates/header';
+import Home from '../pages/home';
+import Character from '../pages/character';
+import Error404 from '../pages/error404';
+import getHash from '../utils/getHash';
+import resolveRoutes from '../utils/resolveRoutes';
 
 //Rutas que tendra la aplicacion
 const routes = {
