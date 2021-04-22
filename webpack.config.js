@@ -34,7 +34,7 @@ module.exports = {
     },
     //Seccion de plugins
     plugins: [
-        new HtmlWebpackPlugin([
+        new HtmlWebpackPlugin(
             {
                 //Indicamos que vamos a injectar un valor al archivo HTML
                 inject: true,
@@ -43,6 +43,6 @@ module.exports = {
                 //Nombre y ruta que tendra el archivo final, en este caso partimos de la carpeta dist
                 filename: './index.html',
             }
-        ]),
+        ),
     ]
 }
