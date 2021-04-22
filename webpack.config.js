@@ -4,7 +4,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 //Modulo que exporta la configuracion
-module.export = {
+module.exports = {
     //Punto de entrada
     entry: './src/index.js',
     //Ruta a la que enviaremos el codigo listo y preparado para produccion
@@ -21,7 +21,8 @@ module.export = {
     module: {
         rules: [
             {
-                test: /\.js?$/,
+                //Extensiones que usaremos en el loader
+                test: /\.m?js$/,
                 //Excluyendo la carpeta node_modules
                 exclude: /node_modules/,
                 //Indicamos que utilizaremos el babel loader
@@ -40,8 +41,8 @@ module.export = {
                 //Ruta de donde se encuentra el template principal
                 template: './public/index.html',
                 //Nombre y ruta que tendra el archivo final, en este caso partimos de la carpeta dist
-                filename: './index.html'
+                filename: './index.html',
             }
-        ])
+        ]),
     ]
 }
