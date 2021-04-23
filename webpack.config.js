@@ -2,6 +2,7 @@
 const path = require('path');
 //Asignando el plugin de HTML Webpack a una variable
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 //Modulo que exporta la configuracion
 module.exports = {
@@ -44,5 +45,9 @@ module.exports = {
                 filename: './index.html',
             }
         ),
+        new CopyWebpackPlugin([{
+            from: './src/styles/styles.css',
+            to: '',
+        }]),
     ]
 }
